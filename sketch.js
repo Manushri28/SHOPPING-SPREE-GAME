@@ -278,7 +278,7 @@ function setup() {
   item12.addImage(item12IMG);
   item12.scale = 0.3
 
-  start = createSprite(683, 3630, 500, 70);
+  start = createSprite(displayWidth/2, displayHeight*5 - 300, 500, 70);
   start.shapeColor = "teal"
   start.addImage(startIMG);
 
@@ -428,7 +428,7 @@ function draw() {
 
     }
 
-    if(runner.position.x <= 1749 && runner.position.x >= 200  &&  runner.position.y <= 1070 && runner.position.y >= 583){
+    if(runner.position.x <= 1749 && runner.position.x >= 200  &&  runner.position.y === 1110 && runner.position.y >= 583){
       gameState = 2;
     }
 
@@ -450,10 +450,10 @@ if(gameState === 2){
   clearInterval(interval);
   background("turquoise");
   fill("black");
-  textSize(53);
+  textSize(47);
   textFont("BOLD")
-  text("Yoo-Hooo ! You Won !!", runner.position.x - 200, runner.position.y + 140);
-  text("Your Score is : " + score, runner.position.x - 180, runner.position.y + 190);
+  text("Yoo-Hooo ! You Won !!", runner.position.x - 200, runner.position.y + 170);
+  text("Your Score is : " + score, runner.position.x - 180, runner.position.y + 220);
   
 
 }
